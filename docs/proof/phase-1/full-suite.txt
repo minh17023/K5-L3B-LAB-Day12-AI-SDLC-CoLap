@@ -6,8 +6,10 @@ test_id_sorting (test_python_starter_units.Units.test_id_sorting) ... ok
 test_input_edges_and_inherit (test_python_starter_units.Units.test_input_edges_and_inherit) ... ok
 test_live_inputs_keep_fast_tap_edge (test_python_starter_units.Units.test_live_inputs_keep_fast_tap_edge) ... ok
 test_session_steps_gather_and_dock (test_python_starter_units.Units.test_session_steps_gather_and_dock) ... ok
+test_custom_shift_length_keeps_customer_schedule_relative_to_start (test_quan_p1.QuanLifecycle.test_custom_shift_length_keeps_customer_schedule_relative_to_start) ... ok
 test_customer_arrival_and_no_dish_are_deterministic (test_quan_p1.QuanLifecycle.test_customer_arrival_and_no_dish_are_deterministic) ... ok
 test_customer_leaves_when_patience_expires (test_quan_p1.QuanLifecycle.test_customer_leaves_when_patience_expires) ... ok
+test_customer_without_dish_chooses_first_available_menu_item (test_quan_p1.QuanLifecycle.test_customer_without_dish_chooses_first_available_menu_item) ... ok
 test_dish_is_picked_served_and_paid (test_quan_p1.QuanLifecycle.test_dish_is_picked_served_and_paid) ... ok
 test_interact_stove_starts_cooking (test_quan_p1.QuanLifecycle.test_interact_stove_starts_cooking) ... ok
 test_scenario_customer_reserves_recipe_from_stock (test_quan_p1.QuanLifecycle.test_scenario_customer_reserves_recipe_from_stock) ... ok
@@ -41,7 +43,7 @@ test_too_few_members (test_team_check.TeamCheck.test_too_few_members) ... ok
 test_wrong_size_duplicate_and_outsider (test_team_check.TeamCheck.test_wrong_size_duplicate_and_outsider) ... ok
 
 ----------------------------------------------------------------------
-Ran 37 tests in 5.953s
+Ran 39 tests in 4.590s
 
 OK
 exit=0
