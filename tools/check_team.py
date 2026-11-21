@@ -3,7 +3,7 @@
     python3 tools/check_team.py
 
 Điều kiện của bảng thành viên (commit của người không có trong danh sách không được tính; CI chỉ cảnh báo, không chặn):
-  - TEAM.md có bảng thành viên với 4-6 người, mỗi người có GitHub handle thật (không để mẫu/…),
+  - TEAM.md có bảng thành viên với 2-6 người, mỗi người có GitHub handle thật (không để mẫu/…),
     handle không trùng, có module chính.
   - `team_size` trong game.contract.json bằng đúng số thành viên.
   - Người mở PR (GITHUB_ACTOR) phải nằm trong danh sách.
@@ -62,8 +62,8 @@ def validate(members, team_size, actor=None, event=None):
             errs.append(f"thành viên #{i}: thiếu module chính")
     if len(set(handles)) != len(handles):
         errs.append("có GitHub handle bị trùng")
-    if not (4 <= len(members) <= 6):
-        errs.append(f"số thành viên phải từ 4 đến 6 (đang có {len(members)})")
+    if not (2 <= len(members) <= 6):
+        errs.append(f"số thành viên phải từ 2 đến 6 (đang có {len(members)})")
     if team_size != len(members):
         errs.append(f"team_size trong game.contract.json ({team_size}) khác số thành viên ({len(members)})")
     if event == "pull_request" and actor and not actor.endswith("[bot]") and actor.lower() not in handles:

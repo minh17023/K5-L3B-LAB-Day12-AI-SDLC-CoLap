@@ -10,6 +10,7 @@
 | Cùng seed cho output byte giống nhau | Chạy hai lần headless cùng scenario | [`determinism.txt`](../proof/phase-1/determinism.txt) | Đạt |
 | Hai mode headless chạy được | `chonoi.headless` với `quan` 600 tick và `gather` 60 tick | [`headless-modes.txt`](../proof/phase-1/headless-modes.txt) | Đạt |
 | Live phục vụ snapshot và canvas | Khởi động `LiveServer` ở mode `quan`, đọc `/state` và `/` | [`live-quan.txt`](../proof/phase-1/live-quan.txt) | Đạt |
+| Danh sách team khớp contract | `py -3 tools/check_team.py` | [`team-check.txt`](../proof/phase-1/team-check.txt) | Đạt |
 
 ## Đánh giá ngắn
 
