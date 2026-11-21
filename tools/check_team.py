@@ -62,8 +62,8 @@ def validate(members, team_size, actor=None, event=None):
             errs.append(f"thành viên #{i}: thiếu module chính")
     if len(set(handles)) != len(handles):
         errs.append("có GitHub handle bị trùng")
-    if not (4 <= len(members) <= 6):
-        errs.append(f"số thành viên phải từ 4 đến 6 (đang có {len(members)})")
+    if not (2 <= len(members) <= 6):
+        errs.append(f"số thành viên phải từ 2 đến 6 (đang có {len(members)})")
     if team_size != len(members):
         errs.append(f"team_size trong game.contract.json ({team_size}) khác số thành viên ({len(members)})")
     if event == "pull_request" and actor and not actor.endswith("[bot]") and actor.lower() not in handles:
