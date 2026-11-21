@@ -3,7 +3,7 @@
     python3 tools/check_team.py
 
 Điều kiện của bảng thành viên (commit của người không có trong danh sách không được tính; CI chỉ cảnh báo, không chặn):
-  - TEAM.md có bảng thành viên với 4-6 người, mỗi người có GitHub handle thật (không để mẫu/…),
+  - TEAM.md có bảng thành viên với 2-6 người, mỗi người có GitHub handle thật (không để mẫu/…),
     handle không trùng, có module chính.
   - `team_size` trong game.contract.json bằng đúng số thành viên.
   - Người mở PR (GITHUB_ACTOR) phải nằm trong danh sách.

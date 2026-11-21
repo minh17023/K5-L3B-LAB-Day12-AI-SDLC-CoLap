@@ -6,11 +6,11 @@
 <title>Quán Ăn Chợ Nổi — chơi thử</title>
 <style>
   html, body { margin: 0; height: 100%; background: #10161c; color: #e8eef2; font: 14px/1.4 system-ui, sans-serif; overflow: hidden; }
-  canvas { display: block; width: 100vw; height: 100vh; }
+  canvas { display: block; width: 100vw; height: 100vh; touch-action: none; }
 </style>
 </head>
 <body>
-<canvas id="c"></canvas>
+<canvas id="c" role="img" aria-label="Mô phỏng Quán Ăn Chợ Nổi, điều khiển bằng bàn phím"></canvas>
 <script>
 "use strict";
 /*
@@ -239,8 +239,11 @@ function drawQuan(w, h) {
     const c = byTable[tb.id];
     if (c) {
       const cx = sx(tb.pos[0]), cy = sy(tb.pos[1]) - 1.5 * s;
-      ctx.fillStyle = c.state === "eating" ? "#7bc67b" : "#f4b6c2"; ctx.beginPath(); ctx.arc(cx, cy, 0.55 * s, 0, Math.PI * 2); ctx.fill();
+      const stateColor = c.state === "eating" ? "#7bc67b" : c.state === "ready" ? "#f4d35e" : "#f4b6c2";
+      ctx.fillStyle = stateColor; ctx.beginPath(); ctx.arc(cx, cy, 0.55 * s, 0, Math.PI * 2); ctx.fill();
       text(c.dish_id || "?", cx, cy - 0.75 * s, { size: 10, align: "center", color: "#2a1a0a" });
+      const stateName = { waiting: "đợi", cooking: "đang nấu", ready: "sẵn sàng", eating: "đang ăn" }[c.state] || c.state || "?";
+      text(stateName, cx, cy + 1.25 * s, { size: 10, align: "center", color: "#2a1a0a" });
       if (c.patience_ticks_left !== undefined) bar(cx - 0.8 * s, cy + 0.65 * s, 1.6 * s, 5, c.patience_ticks_left / patMax, "#e57373");
     }
   });
@@ -260,6 +263,9 @@ function drawQuan(w, h) {
   text(`Tiền ${snap.money ?? 0}k · uy tín ${(snap.reputation ?? 0).toFixed(1)} · điểm ${snap.score ?? 0}`, 110, 28, { size: 16 });
   const stock = snap.stock ? Object.keys(snap.stock).map((k) => (KIND_NAME[k] || k) + "×" + snap.stock[k]).join(", ") : "";
   text("Kho: " + (stock || "(trống)"), 14, 52, { size: 13, color: "#cfd8dc" });
+  const stoveStates = (snap.stoves || []).map((st) => st.state).join(" · ") || "trống";
+  const activeCustomers = (snap.customers || []).length;
+  text(`Bếp ${stoveStates} · khách ${activeCustomers}`, 14, 70, { size: 12, color: "#cfd8dc" });
   text("WASD/mũi tên đi · E tương tác (bếp / bàn) · R chơi lại", w - 10, h - 14, { size: 12, align: "right", color: "#9fb3c0" });
 }
 
