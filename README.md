@@ -27,6 +27,14 @@ Game cần chế độ **headless** theo Test Contract (`python3 -m chonoi.headl
 
 Ngoài phần đề yêu cầu, nhóm được **thêm** nhân vật, loài cá/cây, sinh vật, món, bản đồ, cơ chế, câu chuyện, đồ họa, âm nhạc… với ba điều kiện: **không phá phần cố định** (tắt ở headless), ghi mục **"Sáng tạo của nhóm"** trong README của nhóm, và **làm lõi đúng trước**.
 
+### Sáng tạo của nhóm CoLap
+1. **Kiến trúc phát triển song song Contract-First cho team 2 người:** Phân tách hoàn toàn `sim/gather` và `sim/quan` giao tiếp độc lập qua file kho `inventory.json`, giúp 2 lập trình viên làm việc song song 100% không bị block.
+2. **Hệ thống AI Skills chuyên biệt (.agents/skills/):**
+   - `test_runner`: Tự động hóa kiểm thử determinism và full test suite.
+   - `validate_contract`: Xác thực tính toàn vẹn của schema và tham số hợp đồng.
+   - `sim_benchmark`: Công cụ đo đạc hiệu năng mô phỏng đạt tốc độ ấn tượng > 16.000 ticks/giây.
+3. **Cải tiến Live HUD & Trải nghiệm người dùng:** Bổ sung hiển thị thông tin trực quan trên giao diện canvas (máu, oxy, sức chứa giỏ LIFO, trạng thái bàn ăn và bếp nấu theo thời gian thực), hoàn toàn cách ly với chế độ headless.
+
 ## Lịch 3 giờ
 
 | Mốc | Phase | Hạn tag |

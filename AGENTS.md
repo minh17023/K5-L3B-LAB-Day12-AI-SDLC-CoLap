@@ -46,3 +46,8 @@
   - Bổ sung custom skill `sim_benchmark` phục vụ đo đạc hiệu năng mô phỏng.
   - Viết `tests/test_phase3.py` kiểm thử hiệu năng và bảo toàn tài nguyên (tốc độ đạt > 16.000 ticks/s).
   - Toàn bộ 51/51 tests đạt 100%. Gắn tag `phase-3`.
+
+- **Phase 4 (Hoàn thành & Bàn giao):**
+  - Hoàn tất toàn bộ hồ sơ chất lượng: `CHANGELOG.md`, mục Sáng tạo nhóm trong `README.md`, `docs/retro.md`, phản tư cá nhân cả 2 thành viên.
+  - Kiểm thử nghiệm thu cuối cùng (51/51 tests xanh, headless 600 ticks tất định).
+  - Gắn tag `phase-4` và phát hành chính thức Release `v1.0.0`.

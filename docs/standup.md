@@ -8,4 +8,6 @@
 | 2 | truien | Kiểm thử logic quán khi kho cạn kiệt và khách hàng đợi lâu. | Kiểm tra tính toán điểm uy tín và cập nhật ma trận Phase 2. | Không có. |
 | 3 | minh17023 | Đã gắn tag phase-2; hoàn thành skill sim_benchmark và test hiệu năng. | Đo đạc benchmark headless và kiểm tra bảo toàn tài nguyên. | Không có. |
 | 3 | truien | Xác minh chạy headless đường dài 600 ticks cho cả 2 mode không rò rỉ bộ nhớ. | Cập nhật ma trận truy vết Phase 3 và chuẩn bị đóng gói Phase 4. | Không có. |
+| 4 | minh17023 | Đã gắn tag phase-3; hoàn thành CHANGELOG, README sáng tạo và đóng gói v1.0.0. | Gắn tag phase-4 và Release v1.0.0. | Không có. |
+| 4 | truien | Đã hoàn thành nghiệm thu full suite 51 tests, cập nhật retro nhóm và phản tư. | Hỗ trợ demo và tổng kết lab. | Không có. |
 | 1 | Thành viên 1 | Chưa cập nhật trong phiên này. | Review `sim/quan.py`, tích hợp và chạy lại contract. | Chờ đồng bộ thành viên. |

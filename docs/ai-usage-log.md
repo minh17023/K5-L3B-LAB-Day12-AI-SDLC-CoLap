@@ -8,3 +8,5 @@
 | 2 | truien | Codex | Rà soát các ca biên trong quán ăn, kiểm tra độ bền của vòng đời khách và uy tín | Không đo được | Không có |
 | 3 | minh17023 | Antigravity (Gemini 3.8 Flash) | Thiết kế agent skill sim_benchmark, lập trình test hiệu năng và bảo toàn tài nguyên | ~10k tokens | Không có |
 | 3 | truien | Codex | Kiểm chứng headless đường dài và xác nhận tốc độ tick rate | Không đo được | Không có |
+| 4 | minh17023 | Antigravity (Gemini 3.8 Flash) | Đóng gói release v1.0.0, cập nhật README sáng tạo, CHANGELOG và phản tư Phase 4 | ~10k tokens | Không có |
+| 4 | truien | Codex | Nghiệm thu toàn diện test suite, hoàn tất retro nhóm và phản tư cá nhân | Không đo được | Không có |
