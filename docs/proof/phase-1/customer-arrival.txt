@@ -1,0 +1,1 @@
+{"type":"event","tick":120,"phase":"quan","name":"customer_arrived","data":{"customer_id":"C1","table_id":"T1","dish_id":"ca_loc_nuong_trui"}}

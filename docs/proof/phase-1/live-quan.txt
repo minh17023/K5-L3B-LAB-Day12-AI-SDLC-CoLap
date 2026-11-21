@@ -1,0 +1,6 @@
+Live smoke: `LiveServer(LiveGame("quan", ...))`
+
+Kết quả: `state_mode=quan html_canvas=True stock={'ca_loc': 1}`
+
+Server khởi động, `/state` trả snapshot quán và `/` trả canvas UI. Server dừng
+sạch sau kiểm thử.

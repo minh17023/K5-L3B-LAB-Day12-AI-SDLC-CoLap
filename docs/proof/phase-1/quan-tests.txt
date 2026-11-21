@@ -1,0 +1,11 @@
+test_customer_arrival_and_no_dish_are_deterministic (tests.test_quan_p1.QuanLifecycle.test_customer_arrival_and_no_dish_are_deterministic) ... ok
+test_customer_leaves_when_patience_expires (tests.test_quan_p1.QuanLifecycle.test_customer_leaves_when_patience_expires) ... ok
+test_dish_is_picked_served_and_paid (tests.test_quan_p1.QuanLifecycle.test_dish_is_picked_served_and_paid) ... ok
+test_interact_stove_starts_cooking (tests.test_quan_p1.QuanLifecycle.test_interact_stove_starts_cooking) ... ok
+test_scenario_customer_reserves_recipe_from_stock (tests.test_quan_p1.QuanLifecycle.test_scenario_customer_reserves_recipe_from_stock) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+OK
+exit=0
