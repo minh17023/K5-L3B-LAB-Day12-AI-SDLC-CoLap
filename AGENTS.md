@@ -28,6 +28,7 @@
 ## Skills / hooks của nhóm
 - `test_runner` (.agents/skills/test_runner/SKILL.md): Chạy full test suite, team check và kiểm tra determinism của output JSONL trước khi merge/tag.
 - `validate_contract` (.agents/skills/validate_contract/SKILL.md): Kiểm tra tính hợp lệ của game.contract.json và schema kho nguyên liệu inventory.json.
+- `sim_benchmark` (.agents/skills/sim_benchmark/SKILL.md): Đo lường hiệu năng tick rate và đánh giá tốc độ mô phỏng 60 Hz.
 
 ## Tiến độ theo Phase
 - **Phase 1 (Hoàn thành):**
@@ -40,3 +41,8 @@
   - Tích hợp trọn vẹn nhánh của 2 thành viên (`lathaiminh` và `feat/quan-member2`) vào `main`.
   - Bổ sung `tests/test_phase2.py` kiểm thử các trường hợp biên: cách ly kho sau ngất, vận hành quán khi cạn kiệt nguyên liệu, giới hạn uy tín.
   - Toàn bộ 48/48 tests đạt 100%, xác nhận tính tất định SHA256 trùng khớp từng byte. Gắn tag `phase-2`.
+
+- **Phase 3 (Hoàn thành):**
+  - Bổ sung custom skill `sim_benchmark` phục vụ đo đạc hiệu năng mô phỏng.
+  - Viết `tests/test_phase3.py` kiểm thử hiệu năng và bảo toàn tài nguyên (tốc độ đạt > 16.000 ticks/s).
+  - Toàn bộ 51/51 tests đạt 100%. Gắn tag `phase-3`.

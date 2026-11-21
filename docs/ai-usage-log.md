@@ -6,3 +6,5 @@
 | 1 | truien | Codex | Đọc GUIDE, triển khai `QuanSim`, thêm test và kiểm chứng headless/live | Không đo được trong repo | Lần đầu chạy lệnh `python3` trên Windows trúng alias Microsoft Store, sau đó xác minh bằng `py -3`. |
 | 2 | minh17023 | Antigravity (Gemini 3.8 Flash) | Giải quyết merge conflict, viết test_phase2.py kiểm thử trường hợp biên, xác minh determinism | ~12k tokens | Lệnh fc trong PowerShell bị nhầm với Format-Custom, đã chuyển sang dùng Get-FileHash để kiểm tra mã SHA256 |
 | 2 | truien | Codex | Rà soát các ca biên trong quán ăn, kiểm tra độ bền của vòng đời khách và uy tín | Không đo được | Không có |
+| 3 | minh17023 | Antigravity (Gemini 3.8 Flash) | Thiết kế agent skill sim_benchmark, lập trình test hiệu năng và bảo toàn tài nguyên | ~10k tokens | Không có |
+| 3 | truien | Codex | Kiểm chứng headless đường dài và xác nhận tốc độ tick rate | Không đo được | Không có |

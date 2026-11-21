@@ -1,0 +1,1 @@
+600 ticks in 0.036s, rate=16624.3 ticks/s
