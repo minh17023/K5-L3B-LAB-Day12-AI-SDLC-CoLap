@@ -26,4 +26,12 @@
 - Sáng tạo thêm được khuyến khích nhưng phải tắt ở headless (xem README, mục "Tự do sáng tạo").
 
 ## Skills / hooks của nhóm
-- (Ghi tên và khi nào dùng; tối thiểu 2 skill/hook/command nhóm tự viết, đặt ở `.agents/skills/` hoặc tương đương.)
+- `test_runner` (.agents/skills/test_runner/SKILL.md): Chạy full test suite, team check và kiểm tra determinism của output JSONL trước khi merge/tag.
+- `validate_contract` (.agents/skills/validate_contract/SKILL.md): Kiểm tra tính hợp lệ của game.contract.json và schema kho nguyên liệu inventory.json.
+
+## Tiến độ theo Phase
+- **Phase 1 (Hoàn thành):**
+  - Đã cấu hình `game.contract.json` (team_size = 2, team = CoLap).
+  - Hoàn thiện `chonoi/sim/gather.py`: bơi, lặn (dive/surface), oxy, ngạt thở, choke, faint, hái nút (regrow), bắt cá (cooldown), cập bến và xuất kho.
+  - Bổ sung unit test `tests/test_gather.py` (6 tests xanh).
+  - Kiểm tra toàn bộ 38 test suite đạt 100%.
