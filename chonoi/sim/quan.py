@@ -70,6 +70,8 @@ class QuanSim:
     def _restore_customer(self, raw):
         customer = dict(raw)
         dish_id = customer.get("dish_id", customer.get("dish"))
+        if dish_id is None:
+            dish_id = self._choose_dish()
         if dish_id is not None and dish_id not in self.menu:
             raise BadInput(f"customers.{customer.get('id')}: món không có trong menu: {dish_id}")
         state = customer.get("state", "waiting")
@@ -318,7 +320,7 @@ class QuanSim:
         }))
 
     def _waiting_customer(self):
-        waiting = [c for c in self.customers if c["state"] == "waiting"]
+        waiting = [c for c in self.customers if c["state"] == "waiting" and c.get("dish_id") in self.menu]
         return sort_by_id(waiting)[0] if waiting else None
 
     def _customer_by_id(self, customer_id):

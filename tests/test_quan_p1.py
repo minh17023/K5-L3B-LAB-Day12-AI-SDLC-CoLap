@@ -20,6 +20,16 @@ class QuanLifecycle(unittest.TestCase):
         self.assertEqual(snap["stock"], {})
         self.assertEqual(snap["customers"][0]["reserved"], {"ca_loc": 1})
 
+    def test_customer_without_dish_chooses_first_available_menu_item(self):
+        scenario = {
+            "stock": {"ca_loc": 1},
+            "customers": [{"id": "C1", "table_id": "T1"}],
+        }
+        session = Session("quan", self.tuning, scenario, 1)
+        customer = session.snapshot()["customers"][0]
+        self.assertEqual(customer["dish_id"], "ca_loc_nuong_trui")
+        self.assertEqual(customer["reserved"], {"ca_loc": 1})
+
     def test_customer_leaves_when_patience_expires(self):
         scenario = {
             "stock": {"ca_loc": 1},
