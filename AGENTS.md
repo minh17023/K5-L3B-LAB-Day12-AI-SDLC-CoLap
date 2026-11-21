@@ -35,3 +35,8 @@
   - Hoàn thiện `chonoi/sim/gather.py`: bơi, lặn (dive/surface), oxy, ngạt thở, choke, faint, hái nút (regrow), bắt cá (cooldown), cập bến và xuất kho.
   - Bổ sung unit test `tests/test_gather.py` (6 tests xanh).
   - Kiểm tra toàn bộ 38 test suite đạt 100%.
+
+- **Phase 2 (Hoàn thành):**
+  - Tích hợp trọn vẹn nhánh của 2 thành viên (`lathaiminh` và `feat/quan-member2`) vào `main`.
+  - Bổ sung `tests/test_phase2.py` kiểm thử các trường hợp biên: cách ly kho sau ngất, vận hành quán khi cạn kiệt nguyên liệu, giới hạn uy tín.
+  - Toàn bộ 48/48 tests đạt 100%, xác nhận tính tất định SHA256 trùng khớp từng byte. Gắn tag `phase-2`.
