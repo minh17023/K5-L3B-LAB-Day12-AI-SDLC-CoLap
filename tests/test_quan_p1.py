@@ -39,6 +39,7 @@ class QuanLifecycle(unittest.TestCase):
         session = Session("quan", self.tuning, scenario, 1)
         events = session.step(InputPlayer([]).advance(0))
         self.assertEqual([e["name"] for e in events], ["customer_left"])
+        self.assertEqual(session.snapshot()["stock"], {"ca_loc": 1})
         self.assertEqual(session.sim.reputation, self.tuning["quan"]["reputation_initial"] +
                          self.tuning["quan"]["left_reputation_delta"])
 
