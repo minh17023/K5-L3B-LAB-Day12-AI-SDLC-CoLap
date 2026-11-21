@@ -34,6 +34,7 @@ class QuanSim:
         self.stock = dict(inventory if inventory is not None else scenario.get("stock", {}))
         self.hand = scenario.get("hand")
         self.time_left_ticks = scenario.get("time_left_ticks", int(round(t["duration_s"] * TICK)))
+        self.elapsed_ticks = 0
         self.reputation = scenario.get("reputation", t["reputation_initial"])
         self.stoves = [self._normalise_stove(s) for s in self._merge(t["stoves"], scenario.get("stoves", []))]
         self.tables = self._merge(t["tables"], scenario.get("tables", []))
@@ -132,6 +133,7 @@ class QuanSim:
             return events
 
         self.time_left_ticks = max(0, self.time_left_ticks - 1)
+        self.elapsed_ticks += 1
         self._advance_cooking(events)
         self._move(inp)
         self._spawn_due(events)
@@ -157,8 +159,7 @@ class QuanSim:
                 }))
 
     def _spawn_due(self, events):
-        duration = int(round(self.t["duration_s"] * TICK))
-        elapsed = duration - self.time_left_ticks
+        elapsed = self.elapsed_ticks
         first = self.t["first_customer_tick"]
         interval = max(1, int(round(self.t["customer_interval_s"] * TICK)))
         if elapsed < first or (elapsed - first) % interval:

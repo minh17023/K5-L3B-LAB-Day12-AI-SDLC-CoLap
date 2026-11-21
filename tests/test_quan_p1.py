@@ -63,6 +63,13 @@ class QuanLifecycle(unittest.TestCase):
         self.assertEqual(names, ["customer_arrived", "no_dish"])
         self.assertEqual(session.snapshot()["customers"], [])
 
+    def test_custom_shift_length_keeps_customer_schedule_relative_to_start(self):
+        session = Session("quan", self.tuning, {"time_left_ticks": 121, "stock": {"ca_loc": 1}}, 1)
+        events = []
+        for _ in range(120):
+            events.extend(session.step(InputPlayer([]).advance(0)))
+        self.assertEqual([event["name"] for event in events], ["customer_arrived"])
+
     def test_dish_is_picked_served_and_paid(self):
         tuning = deepcopy(self.tuning)
         tuning["menu"]["ca_loc_nuong_trui"]["cook_s"] = 0.02
